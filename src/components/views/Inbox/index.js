@@ -26,7 +26,7 @@ const Inbox = (props) => {
         {calls?.filter((item) => !item.is_archived).length ? (
           <ArchiveCallsButton archiveCalls={archiveCalls} />
         ) : (
-          <div>No active Calls.</div>
+          <div className="text-center p-5">No active Calls.</div>
         )}
         {calls
           ?.filter((call) => !call.is_archived)

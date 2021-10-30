@@ -10,7 +10,6 @@ import {
 } from "../actions/callActions";
 
 export const getAllCalls = () => async (dispatch) => {
-  console.log("getAllCalls");
   try {
     dispatch(fetchCallsLoading());
     const { data } = await $api.get("/activities");
@@ -79,7 +78,6 @@ export const resetCalls = () => async (dispatch) => {
   try {
     dispatch(fetchCallsLoading());
     const { data } = await $api.get("/reset");
-    // console.log("Message:", data.message);
     dispatch(resetAllCalls(data.message));
   } catch (err) {
     console.error(err);

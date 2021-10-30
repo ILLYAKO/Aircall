@@ -22,11 +22,11 @@ const ArchivedCalls = (props) => {
     return <Spinner />;
   } else {
     return (
-      <div className="  d-flex flex-column">
+      <div className="d-flex flex-column">
         {calls?.filter((item) => item.is_archived).length ? (
           <ResetAllCallsButton resetCalls={resetCalls} />
         ) : (
-          <div>No archived Calls.</div>
+          <div className="text-center p-5">No archived Calls.</div>
         )}
 
         {calls

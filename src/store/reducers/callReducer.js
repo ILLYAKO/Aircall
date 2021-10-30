@@ -13,7 +13,7 @@ const initialState = {
   calls: [],
   isLoading: false,
   error: null,
-  message:""
+  message: "",
 };
 
 export const callReducer = (state = initialState, action) => {
@@ -48,11 +48,10 @@ export const callReducer = (state = initialState, action) => {
         message: "",
       };
 
-    case ARCHIVE_CALL: //----------
+    case ARCHIVE_CALL:
       return {
         ...state,
         call: action.updatedCall,
-        // calls: action.calls,
         isLoading: false,
         error: null,
         message: "",
@@ -68,11 +67,10 @@ export const callReducer = (state = initialState, action) => {
         message: "",
       };
 
-    case RESET_CALL: //----------
+    case RESET_CALL:
       return {
         ...state,
         call: {},
-        // calls: [],
         isLoading: false,
         error: null,
         message: action.message,
@@ -82,7 +80,6 @@ export const callReducer = (state = initialState, action) => {
       return {
         ...state,
         call: {},
-        // calls: [],
         isLoading: false,
         error: null,
         message: action.message,

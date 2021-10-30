@@ -12,26 +12,19 @@ const CallItem = ({ item, archiveOneCall, resetOneCall }) => {
 
   const onArchiveClickHandler = (event) => {
     event.stopPropagation();
-    console.log("Archive Click id:", item.id);
     archiveOneCall(item.id);
   };
 
   const onResetClickHandler = (event) => {
     event.stopPropagation();
-    console.log("Reset Click id:", item.id);
     resetOneCall(item.id);
   };
 
   return (
     <>
       <div>
-        <div
-          className="row p-2 m-3 border call-item "
-          onClick={onClickHandler}
-          // data-bs-toggle="modal"
-          // data-bs-target="#staticBackdrop"
-        >
-          <div className="col-1">
+        <div className="row p-2 m-3 border call-item " onClick={onClickHandler}>
+          <div className="col-1 p-0">
             {item.direction === "inbound" ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,12 +55,12 @@ const CallItem = ({ item, archiveOneCall, resetOneCall }) => {
               </svg>
             )}
           </div>
-          <div className="col-6">{item.from}</div>
-          <div className="col-4">
+          <div className="col-7 p-0">{item.from}</div>
+          <div className="col-3 p-0">
             {DateTime.fromISO(item.created_at).toFormat("t").toString()}
           </div>
 
-          <div className="col-1">
+          <div className="col-1 p-0">
             {item?.is_archived ? (
               <svg
                 onClick={onResetClickHandler}
