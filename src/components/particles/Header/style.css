@@ -6,3 +6,31 @@
 .navbar-brand span {
   margin-left: 8px;
 }
+
+.calls-nav-group .nav-link {
+  color: #505050;
+  font-weight: 300;
+}
+.calls-nav-group .nav-link:hover {
+  color: #0f0f0f;
+  font-weight: 600;
+}
+.calls-nav-group .nav-link:focus,
+.calls-nav-group .nav-link:active {
+  color: #0f0f0f;
+  font-weight: 600;
+  border-bottom: red 3px solid;
+}
+
+.nav-link.active {
+  border-bottom: 3px solid red;
+  font-weight: 600;
+}
+.calls-nav-group {
+  position: relative;
+  background: #f8f9fa;
+  border-top: 1px #dee2e6 solid;
+  border-right: 1px #dee2e6 solid;
+  border-left: 1px #dee2e6 solid;
+  border-top-left-radius: 16px;
+}

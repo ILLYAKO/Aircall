@@ -23,7 +23,7 @@ const CallItem = ({ item, archiveOneCall, resetOneCall }) => {
   return (
     <>
       <div>
-        <div className="row p-2 m-3 border call-item " onClick={onClickHandler}>
+        <div className="row p-2 m-3 border call-item">
           <div className="col-1 p-0">
             {item.direction === "inbound" ? (
               <svg
@@ -55,12 +55,13 @@ const CallItem = ({ item, archiveOneCall, resetOneCall }) => {
               </svg>
             )}
           </div>
-          <div className="col-7 p-0">{item.from}</div>
+          <div onClick={onClickHandler} className="col-7 p-0 call-item-from">
+            {item.from}
+          </div>
           <div className="col-3 p-0">
             {DateTime.fromISO(item.created_at).toFormat("t").toString()}
           </div>
-
-          <div className="col-1 p-0">
+          <div className="col-1 p-0 call-item-archived">
             {item?.is_archived ? (
               <svg
                 onClick={onResetClickHandler}
@@ -90,7 +91,7 @@ const CallItem = ({ item, archiveOneCall, resetOneCall }) => {
           </div>
         </div>
       </div>
-      {isDetailsShown ? <CallDetails item={item} /> : null}
+      {isDetailsShown ? <CallDetails details={item} /> : null}
     </>
   );
 };

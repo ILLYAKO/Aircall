@@ -15,22 +15,14 @@
   border: 1px solid #c1c1c1;
   border-radius: 50%;
 }
-
 .dial-pad-inner {
   margin-top: 12px;
   margin-left: 12px;
   position: absolute;
 }
-
-.dial-pad-inner svg{
-    /* color: red; */
-    /* font-size: 80px; */
-}
-
 .circle-out {
   height: 16px;
-  width: 16px;
-  /* position: relative; */
+  width: 16px; 
   border: 1px solid #c1c1c1;
   border-radius: 50%;
 }
@@ -41,7 +33,6 @@
   width: 8px;
   background-color: #3db91f;
   border-radius: 50%;
-  /* position: absolute; */
 }
 svg.bi-grid-3x3-gap-fill {
     height: 28px !important;

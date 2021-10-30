@@ -1,3 +1,9 @@
-.call-item{
+.call-item-from,
+.call-item-archived {
+  cursor: pointer;
+}
+
+.call-item {
     cursor: pointer;
+    border-radius: 10px;
 }
