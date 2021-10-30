@@ -31,13 +31,11 @@ const Inbox = (props) => {
         {calls
           ?.filter((call) => !call.is_archived)
           .map((item, i) => (
-            // <div key={item.id}>
             <CallItem
               key={item.id}
               item={item}
               archiveOneCall={archiveOneCall}
             />
-            // </div>
           ))}
       </div>
     );

@@ -62,8 +62,8 @@ const CallItem = ({ item, archiveOneCall }) => {
               </svg>
             )}
           </div>
-          <div className="col-7">{item.from}</div>
-          <div className="col-3">
+          <div className="col-6">{item.from}</div>
+          <div className="col-4">
             {DateTime.fromISO(item.created_at).toFormat("t").toString()}
           </div>
 
