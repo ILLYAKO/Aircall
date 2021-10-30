@@ -12,13 +12,19 @@
 #root .app-container {
   width: 376px;
   height: 666px;
-  z-index: 100;
+  /* z-index: 100; */
 
   background: white;
   border-radius: 3px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
+  
 }
 
 #root .container-view {
   padding: 20px;
+}
+
+.view-wrapper{
+  overflow-y: scroll; height:400px;
+  height: 666px
 }
