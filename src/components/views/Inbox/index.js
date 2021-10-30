@@ -60,9 +60,9 @@ const mapDispatchToProps = (dispatch) => {
     archiveCalls: () => {
       dispatch(archiveCalls());
     },
-    
-    archiveOneCall: ( callId) => {
-      dispatch(archiveOneCall( callId));
+
+    archiveOneCall: (callId) => {
+      dispatch(archiveOneCall(callId));
     },
   };
 };

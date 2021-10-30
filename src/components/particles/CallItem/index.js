@@ -3,7 +3,7 @@ import { DateTime } from "luxon";
 import "./style.css";
 import CallDetails from "../CallDetails";
 
-const CallItem = ({ item, archiveOneCall }) => {
+const CallItem = ({ item, archiveOneCall, resetOneCall }) => {
   const [isDetailsShown, setIsDetailsShown] = useState(false);
 
   const onClickHandler = () => {
@@ -19,7 +19,7 @@ const CallItem = ({ item, archiveOneCall }) => {
   const onResetClickHandler = (event) => {
     event.stopPropagation();
     console.log("Reset Click id:", item.id);
-    archiveOneCall(item.id);
+    resetOneCall(item.id);
   };
 
   return (

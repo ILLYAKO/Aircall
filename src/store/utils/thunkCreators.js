@@ -23,16 +23,15 @@ export const getAllCalls = () => async (dispatch) => {
   }
 };
 
-export const archiveOneCall = (callId, getAllCalls) => async (dispatch) => {
-  console.log("archiveOneCall");
+export const archiveOneCall = (callId) => async (dispatch) => {
   try {
     dispatch(fetchCallsLoading());
-    const { data } = await $api.post(`/activities/${callId}`, {
+    await $api.post(`/activities/${callId}`, {
       is_archived: true,
     });
-    
-    dispatch(archiveCall());
-    getAllCalls();
+    const { data } = await $api.get("/activities");
+    await dispatch(archiveCall());
+    await dispatch(fetchAllCalls(data));
   } catch (err) {
     console.error(err);
     dispatch(
@@ -40,6 +39,7 @@ export const archiveOneCall = (callId, getAllCalls) => async (dispatch) => {
     );
   }
 };
+
 export const archiveCalls = () => async (dispatch) => {
   try {
     dispatch(fetchCallsLoading());
@@ -50,6 +50,23 @@ export const archiveCalls = () => async (dispatch) => {
       });
     });
     dispatch(archiveAllCalls());
+  } catch (err) {
+    console.error(err);
+    dispatch(
+      fetchCallsError({ error: err?.response.data.error || "Server Error" })
+    );
+  }
+};
+
+export const resetOneCall = (callId) => async (dispatch) => {
+  try {
+    dispatch(fetchCallsLoading());
+    await $api.post(`/activities/${callId}`, {
+      is_archived: false,
+    });
+    const { data } = await $api.get("/activities");
+    await dispatch(archiveCall());
+    await dispatch(fetchAllCalls(data));
   } catch (err) {
     console.error(err);
     dispatch(

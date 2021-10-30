@@ -2,12 +2,16 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import "./style.css";
 import CallItem from "../../particles/CallItem";
-import { getAllCalls, resetCalls } from "../../../store/utils/thunkCreators";
+import {
+  getAllCalls,
+  resetOneCall,
+  resetCalls,
+} from "../../../store/utils/thunkCreators";
 import ResetAllCallsButton from "../../particles/ResetAllCallsButton";
 import Spinner from "../../particles/Spinner";
 
 const ArchivedCalls = (props) => {
-  const { calls, getAllCalls, resetCalls, isLoading } = props;
+  const { calls, getAllCalls, resetOneCall, resetCalls, isLoading } = props;
 
   useEffect(() => {
     getAllCalls();
@@ -15,7 +19,7 @@ const ArchivedCalls = (props) => {
   }, []);
 
   if (isLoading) {
-    return <Spinner/>
+    return <Spinner />;
   } else {
     return (
       <div className="  d-flex flex-column">
@@ -28,9 +32,7 @@ const ArchivedCalls = (props) => {
         {calls
           ?.filter((item) => item.is_archived)
           .map((item, i) => (
-            <div key={item.id}>
-              <CallItem item={item} />
-            </div>
+            <CallItem key={item.id} item={item} resetOneCall={resetOneCall} />
           ))}
       </div>
     );
@@ -53,6 +55,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     resetCalls: () => {
       dispatch(resetCalls());
+    },
+    resetOneCall: (callId) => {
+      dispatch(resetOneCall(callId));
     },
   };
 };
