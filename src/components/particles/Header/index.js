@@ -5,7 +5,7 @@ import imgTelephone from "../../../assets/telephone.png";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <div className="navbar-brand" href="/">
           <img
