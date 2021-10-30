@@ -4,7 +4,7 @@ import "./style.css";
 import CallItem from "../../particles/CallItem";
 import { getAllCalls, resetCalls } from "../../../store/utils/thunkCreators";
 import ResetAllCallsButton from "../../particles/ResetAllCallsButton";
-import Spiner from "../../particles/Spiner";
+import Spinner from "../../particles/Spinner";
 
 const ArchivedCalls = (props) => {
   const { calls, getAllCalls, resetCalls, isLoading } = props;
@@ -15,7 +15,7 @@ const ArchivedCalls = (props) => {
   }, []);
 
   if (isLoading) {
-    return <Spiner/>
+    return <Spinner/>
   } else {
     return (
       <div className="  d-flex flex-column">

@@ -1,7 +1,7 @@
 import React from 'react'
 import "./style.css";
 
-const Spiner = () => {
+const Spinner = () => {
     return (
       <div className="d-flex justify-content-center">
         <div className="spinner-border" role="status">
@@ -11,4 +11,4 @@ const Spiner = () => {
     );
 }
 
-export default Spiner
+export default Spinner

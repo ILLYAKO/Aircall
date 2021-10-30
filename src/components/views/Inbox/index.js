@@ -8,7 +8,7 @@ import {
   archiveOneCall,
   archiveCalls,
 } from "../../../store/utils/thunkCreators";
-import Spiner from "../../particles/Spiner";
+import Spinner from "../../particles/Spinner";
 
 const Inbox = (props) => {
   const { calls, getAllCalls, archiveOneCall, archiveCalls, isLoading } = props;
@@ -19,11 +19,11 @@ const Inbox = (props) => {
   }, []);
 
   if (isLoading) {
-    return <Spiner />;
+    return <Spinner />;
   } else {
     return (
       <div className="  d-flex flex-column">
-        {!calls?.filter((item) => item.is_archived).length ? (
+        {calls?.filter((item) => !item.is_archived).length ? (
           <ArchiveCallsButton archiveCalls={archiveCalls} />
         ) : (
           <div>No active Calls.</div>

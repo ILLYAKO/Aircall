@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import "./style.css";
 import CallItem from "../../particles/CallItem";
 import { getAllCalls } from "../../../store/utils/thunkCreators";
-import Spiner from "../../particles/Spiner";
+import Spinner from "../../particles/Spinner";
 
 const AllCalls = (props) => {
   const { calls, getAllCalls, isLoading } = props;
@@ -13,7 +13,7 @@ const AllCalls = (props) => {
   }, []);
 
   if (isLoading) {
-    return <Spiner/>;
+    return <Spinner/>;
   } else {
     return (
       <div className="d-flex flex-column">
