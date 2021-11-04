@@ -9,7 +9,7 @@ const ResetAllCallsButton = ({ resetCalls }) => {
 
   return (
     <div
-      className="bg-light align-self-center border border-1 border-top-0 border-light rounded-bottom text-center w-75 p-3 reset-btn"
+      className="bg-light align-self-center border text-center w-75 mt-3 p-3 reset-btn"
       onClick={() => onClickHandler()}
     >
       Reset All Calls

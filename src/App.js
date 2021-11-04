@@ -21,21 +21,21 @@ const App = () => {
       <div className="app-container d-flex flex-column" id="app">
         <Header />
         <div className="view-wrapper">
-                  <Switch>
-          <Route exact path="/">
-            <Inbox />
-          </Route>
-          <Route path="/archivedcalls">
-            <ArchivedCalls />
-          </Route>
-          <Route path="/allcalls">
-            <AllCalls />
-          </Route>
-          <Route path="/callsettings">
-            <CallSettings />
-          </Route>
-          <Redirect to="/" />
-        </Switch>
+          <Switch>
+            <Route exact path="/">
+              <Inbox />
+            </Route>
+            <Route path="/archivedcalls">
+              <ArchivedCalls />
+            </Route>
+            <Route path="/allcalls">
+              <AllCalls />
+            </Route>
+            <Route path="/callsettings">
+              <CallSettings />
+            </Route>
+            <Redirect to="/" />
+          </Switch>
         </div>
 
         <Panel />

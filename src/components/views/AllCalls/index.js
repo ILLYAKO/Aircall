@@ -20,7 +20,7 @@ const AllCalls = (props) => {
     return <Spinner />;
   } else {
     return (
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column mt-3">
         {calls?.map((item, i) => (
           <CallItem
             key={item.id}

@@ -1,3 +1,4 @@
-.reset-btn{
-    cursor: pointer;
+.reset-btn {
+  cursor: pointer;
+  border-radius: 10px;
 }

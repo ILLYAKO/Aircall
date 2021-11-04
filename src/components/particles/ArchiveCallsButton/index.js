@@ -1,16 +1,14 @@
 import React from "react";
-import "./style.css"
-
+import "./style.css";
 
 const ArchiveCallsButton = ({ archiveCalls }) => {
   const onClickHandler = () => {
-    archiveCalls()
+    archiveCalls();
   };
 
   return (
     <div
-      className="bg-light align-self-center border border-1 border-top-0 border-light rounded-bottom text-center w-75 p-3 archive-btn"
-     
+      className="bg-light align-self-center border text-center w-75 mt-3 p-3 archive-btn"
       onClick={() => onClickHandler()}
     >
       Archive All Calls
