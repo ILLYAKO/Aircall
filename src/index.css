@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url("https://fonts.googleapis.com/css?family=Cabin");
 html,
 body,
 h1,
@@ -15,9 +15,9 @@ li {
 
 body {
   background: #233142;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   font-size: 13px;
-   color: #505050;
+  color: #505050;
   line-height: 1;
   font-weight: 600;
 }

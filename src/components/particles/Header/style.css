@@ -33,7 +33,6 @@
   border-right: 1px #dee2e6 solid;
 }
 
-
 div.navbar-brand span {
   font-size: 1rem !important;
 }
@@ -71,8 +70,8 @@ div.navbar-brand span {
 .place-first::after {
   content: "";
   height: 20px;
-  width: 72px;
-  background-color: #f8f9fa;
+  width: 68px;
+  background-color: #f8f9fa; 
   position: absolute;
   left: 60px;
   top: 25px;
