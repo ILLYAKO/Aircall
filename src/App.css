@@ -4,7 +4,8 @@
   justify-content: center;
 }
 #root .app-container {
- min-width: 376px;
+  /* min-width: 376px; */
+  width: 380px;
   background: white;
   border-radius: 5px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9);
@@ -18,4 +19,11 @@
 
 .app-container {
   height: 100vh;
+}
+
+@media screen and (max-width: 502px) {
+  #root .app-container {
+    /* min-width: 376px; */
+    width: 100%;
+  }
 }

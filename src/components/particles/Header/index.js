@@ -5,8 +5,8 @@ import imgTelephone from "../../../assets/telephone.png";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand mt-0">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand mt-0 ">
+      <div className="container-fluid ">
         <div className="place-first">
           <div className="navbar-brand" href="/">
             <img
@@ -28,7 +28,7 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon">xxx</span>
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div
             className="collapse navbar-collapse calls-nav-group"
@@ -40,9 +40,9 @@ const Header = () => {
                   Inbox
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item ">
                 <Link
-                  className="nav-link"
+                  className="nav-link ps-0"
                   aria-current="page"
                   to="/archivedcalls"
                 >
@@ -50,7 +50,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/allcalls">
+                <Link className="nav-link ps-0" to="/allcalls">
                   All calls
                 </Link>
               </li>
