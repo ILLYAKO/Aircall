@@ -29,8 +29,9 @@
 .calls-nav-group {
   position: relative;
   background: #f8f9fa;
-  border-top: 1px #dee2e6 solid;
-  border-right: 1px #dee2e6 solid;
+  /* border-top: 1px #dee2e6 solid; */
+  /* border-right: 1px #dee2e6 solid; */
+ 
 }
 
 div.navbar-brand span {
@@ -69,13 +70,14 @@ div.navbar-brand span {
 }
 .place-first::after {
   content: "";
-  height: 20px;
+  height: 21px;
   width: 68px;
   background-color: #f8f9fa;
   position: absolute;
   left: 60px;
   top: 25px;
   z-index: -2;
+ 
 }
 
 .place-second {
@@ -88,6 +90,8 @@ div.navbar-brand span {
   background-color: #f8f9fa;
   z-index: 1;
   border-top: 1px solid #a7a7a7;
+   
+  
 }
 .place-second::before {
   content: "";
@@ -116,6 +120,6 @@ div.navbar-brand span {
 
 @media screen and (max-width: 502px) {
   .place-second {
-    width: calc( 100% - 128px);
+    width: calc(100% - 128px);
   }
 }

@@ -19,7 +19,7 @@ const Header = () => {
         </div>
 
         <div className="place-second">
-          <button
+          {/* <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -29,7 +29,7 @@ const Header = () => {
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> */}
           <div
             className="collapse navbar-collapse calls-nav-group"
             id="navbarSupportedContent"

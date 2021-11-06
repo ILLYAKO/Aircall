@@ -22,7 +22,7 @@
 }
 .circle-out {
   height: 16px;
-  width: 16px; 
+  width: 16px;
   border: 1px solid #c1c1c1;
   border-radius: 50%;
 }
@@ -35,6 +35,6 @@
   border-radius: 50%;
 }
 svg.bi-grid-3x3-gap-fill {
-    height: 28px !important;
-    width: 28px !important
+  height: 28px !important;
+  width: 28px !important;
 }

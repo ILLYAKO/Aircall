@@ -4,7 +4,7 @@ import "./style.css";
 const Panel = () => {
   return (
     <footer className="footer mt-auto py-3 bg-light">
-      <div className="row m-0">
+      <div className="row m-0 footer-row">
         <div className="col-2 text-center  position-relative">
           <svg
             xmlns="http://www.w3.org/2000/svg"
