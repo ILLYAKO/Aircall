@@ -1,0 +1,11 @@
+.dotstyle {
+  width: 100%;
+  height: 6px;
+  border-bottom: 1px dotted gray;
+  text-align: center;
+}
+.dotstyle span {
+  font-size: 12px;
+  background-color: white;
+  padding: 0 10px;
+}

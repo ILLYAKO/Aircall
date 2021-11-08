@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import { DateTime } from "luxon";
+
 import "./style.css";
 import CallItem from "../../particles/CallItem";
 import {
@@ -12,11 +14,29 @@ import Spinner from "../../particles/Spinner";
 
 const ArchivedCalls = (props) => {
   const { calls, getAllCalls, resetOneCall, resetCalls, isLoading } = props;
+  let dayOfCall = null;
 
   useEffect(() => {
     getAllCalls();
     // eslint-disable-next-line
   }, []);
+
+    const setDayOfCall = (dayDate) => {
+      if (
+        !dayOfCall ||
+        DateTime.fromISO(dayDate).startOf("day") <
+          DateTime.fromISO(dayOfCall).startOf("day")
+      ) {
+        dayOfCall = DateTime.fromISO(dayDate);
+        return (
+          <div className="dotstyle">
+            <span className="span-dotstyle">
+              {dayOfCall.toLocaleString(DateTime.DATE_MED)}
+            </span>
+          </div>
+        );
+      }
+    };
 
   if (isLoading) {
     return <Spinner />;
@@ -31,8 +51,11 @@ const ArchivedCalls = (props) => {
 
         {calls
           ?.filter((item) => item.is_archived)
-          .map((item, i) => (
-            <CallItem key={item.id} item={item} resetOneCall={resetOneCall} />
+          .map((item) => (
+            <>
+              {setDayOfCall(item.created_at)}
+              <CallItem key={item.id} item={item} resetOneCall={resetOneCall} />
+            </>
           ))}
       </div>
     );
